@@ -1,0 +1,19 @@
+{
+  "name": "sctp-312-cd-serverless",
+  "version": "1.0.0",
+  "description": "```\r git clone\r git add . \r git commit -m \"first commit message\"\r git push\r ```",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/WeiZm2222/sctp-312-cd-serverless.git"
+  },
+  "author": "zmw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/WeiZm2222/sctp-312-cd-serverless/issues"
+  },
+  "homepage": "https://github.com/WeiZm2222/sctp-312-cd-serverless#readme"
+}
