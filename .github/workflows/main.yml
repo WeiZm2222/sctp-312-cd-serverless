@@ -1,0 +1,29 @@
+# Name: is name of the yml
+# run-name : github.actor tells you who is pushing and what he is doing
+# everytime you push to the branch it will run the jobs below. 
+# Job 1: pre-deploy, when you click, you have 3 steps runnign echo. 
+# Job 2:job install dependencies : has the npm install commands. Needs pre-deploy job to run first. Steps : ubutu latest will checkout the repository and run npm install. 
+
+name: CICD for Serverless Application
+run-name: ${{ github.actor }} is doing CICD for serverless application
+
+on:
+  push:
+    branches: [ main, "*"]
+
+jobs:
+  pre-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "🎉 The job was automatically triggered by a ${{ github.event_name }} event"
+      - run: echo "🐧 This job is now running on a ${{ runner.os }} server hosted by GitHub!"
+      - run: echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ${{ github.repository }}."
+
+  install-dependencies:
+    runs-on: ubuntu-latest
+    needs: pre-deploy
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - name: Run Installation of Dependencies Commands
+        run: npm install

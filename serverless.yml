@@ -1,5 +1,5 @@
 service: sctp-312-cd-serverless
-framework: 3
+frameworkVersion: '3'
 
 provider:
   name: aws
