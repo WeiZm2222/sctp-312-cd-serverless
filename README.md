@@ -23,6 +23,6 @@ Add new files
 Run `serverless offline start`
 to test server app on local, you can get a link from local host. 
 
-Run `serverless package` to check if application is read to be deployed. 
+Run `serverless package` to check if application is read to be deployed. It will create a .serverless folder and create the cloudformation templates. 
 
-Run `serverless deploy` to run this on AWS. 
+Run `serverless deploy` to run this on AWS. It will deploy based on cloud formation template. 
